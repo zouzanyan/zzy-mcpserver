@@ -1,0 +1,13 @@
+server:
+  port: 8081
+spring:
+  ai:
+    mcp:
+      server:
+        enabled: true
+        name: my-weather-server
+        sse-message-endpoint: /mcp/message
+        type: async
+        version: 0.0.1
+  application:
+    name: mcp-server
