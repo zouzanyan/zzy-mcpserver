@@ -24,7 +24,7 @@ public class ChatController {
 
 
     @Autowired
-    @Qualifier("ollamaChatClient")
+    @Qualifier("openAiChatClient")
     private ChatClient chatClient;
 
 

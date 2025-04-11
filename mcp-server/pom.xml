@@ -29,6 +29,8 @@
     <properties>
         <java.version>17</java.version>
         <spring-ai.version>1.0.0-SNAPSHOT</spring-ai.version>
+        <spring.cloud.alibaba.version>2023.0.3.2</spring.cloud.alibaba.version>
+
     </properties>
     <dependencies>
         <dependency>
@@ -53,6 +55,12 @@
             <version>1.18.34</version>
         </dependency>
 
+        <!--nacos-服务注册发现-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
@@ -64,6 +72,15 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-alibaba-dependencies</artifactId>
+                <version>${spring.cloud.alibaba.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

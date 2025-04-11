@@ -6,6 +6,8 @@ import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.ai.tool.annotation.ToolParam;
 import org.springframework.stereotype.Service;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Map;
 import java.util.Objects;
 
@@ -21,6 +23,7 @@ public class WService {
 
     @Tool(description = "根据城市名称获取天气")
     public String getWeatherByCity(@ToolParam(description = "城市名称") String city) {
+        logger.info("请求城市名称: {}", city);
         if (Objects.isNull(city)) {
             return "抱歉：城市名称不能为空！";
         }

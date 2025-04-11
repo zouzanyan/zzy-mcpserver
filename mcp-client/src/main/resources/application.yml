@@ -17,7 +17,7 @@ spring:
 
     openai:
       api-key: 111
-      base-url: http://localhost:8080
+      base-url: localhost:8080
       chat:
         options:
           max-tokens: 32768
@@ -27,4 +27,4 @@ spring:
     ollama:
       base-url: http://localhost:11434
       chat:
-        model: qwen2.5:3b
+        model: qwen2.5:7b
