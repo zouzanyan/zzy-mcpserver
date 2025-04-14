@@ -47,21 +47,40 @@
             <version>1.0.0-M6</version>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
         <dependency>
-            <groupId>org.springframework.ai</groupId>
-            <artifactId>spring-ai-mcp-client-spring-boot-starter</artifactId>
-            <version>1.0.0-M6</version>
+            <groupId>com.squareup.okhttp3</groupId>
+            <artifactId>okhttp</artifactId>
+            <version>3.14.0</version>
         </dependency>
+
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.ai</groupId>-->
+<!--            <artifactId>spring-ai-mcp-client-spring-boot-starter</artifactId>-->
+<!--            <version>1.0.0-M6</version>-->
+<!--        </dependency>-->
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.ai</groupId>
+            <artifactId>spring-ai-starter-mcp-client</artifactId>
+            <version>1.0.0-M7</version>
+        </dependency>
 
 
 
-
-
-
+<!--                <dependency>-->
+<!--                    <groupId>org.springframework.boot</groupId>-->
+<!--                    <artifactId>spring-boot-starter-webflux</artifactId>-->
+<!--                </dependency>-->
+<!--                <dependency>-->
+<!--                    <groupId>org.springframework.ai</groupId>-->
+<!--                    <artifactId>spring-ai-starter-mcp-client-webflux</artifactId>-->
+<!--                    <version>1.0.0-M7</version>-->
+<!--                </dependency>-->
 
 
         <dependency>
@@ -70,6 +89,36 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <repositories>
+        <repository>
+            <name>Central Portal Snapshots</name>
+            <id>central-portal-snapshots</id>
+            <url>https://central.sonatype.com/repository/maven-snapshots/</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-milestones</id>
+            <name>Spring Milestones</name>
+            <url>https://repo.spring.io/milestone</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>spring-snapshots</id>
+            <name>Spring Snapshots</name>
+            <url>https://repo.spring.io/snapshot</url>
+            <releases>
+                <enabled>false</enabled>
+            </releases>
+        </repository>
+    </repositories>
 
     <build>
         <plugins>

@@ -1,15 +1,20 @@
 package com.zouzanyan.mcpclient.config;
 
+import io.modelcontextprotocol.client.McpClient;
 import jakarta.annotation.Resource;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
 import org.springframework.ai.chat.memory.InMemoryChatMemory;
+import org.springframework.ai.mcp.customizer.McpAsyncClientCustomizer;
 import org.springframework.ai.ollama.OllamaChatModel;
 import org.springframework.ai.openai.OpenAiChatModel;
 import org.springframework.ai.tool.ToolCallbackProvider;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.stereotype.Component;
+
+import java.time.Duration;
 
 /**
  * @author: zouzanyan
